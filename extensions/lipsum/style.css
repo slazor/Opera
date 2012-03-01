@@ -1,0 +1,41 @@
+body,a,textarea,div { margin: 0; padding: 0; }
+body,textarea { background: #f4f4f5; }
+textarea {
+	position: absolute;
+	margin: 15px 0 0 6px;
+	border: none;
+	overflow: hidden;
+	width: 470px;
+	height: 500px;
+	display: none;
+	padding-top: 10px;
+}
+.button {
+	margin: 0 -1px;
+	border-radius: 5px;
+	background-image: url('overlay-button.png');
+	background-position: 0px 0px;
+	background-repeat: repeat-x;
+	border-bottom-color: rgba(0, 0, 0, 0.251);
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	color: #fff !important;
+	font-weight: 700;
+	cursor: pointer;
+	text-decoration: none;
+	text-shadow: #555 0px -1px 1px;
+}
+.large.button {
+	font-size: 14px;
+	padding: 9px 19px 9px 19px;
+}
+.green.button {
+	margin-left: 5px;
+	background-color: #91bd09;
+}
+.green.button:hover { background-color: #aadd0b; }
+.blue.button { background-color: #007d9a; }
+.blue.button:hover { background-color: #02abd2; }
+.red.button { background-color: #db2727; }
+.red.button:hover { background-color: #f11e1e; }
+#par2 { display: block; }
