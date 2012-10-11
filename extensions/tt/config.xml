@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets">
+	<name>TT</name>
+	<description>TT DESC</description>
+  	<author href="yourURL" email="yourEMail">Mikael Wase</author>
+  	<icon src="lipsum.png"/>
+</widget>
