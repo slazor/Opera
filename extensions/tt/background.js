@@ -1,6 +1,6 @@
 var buttonProperties = {
 	title: "TT",
-	icon: "tt.png",
+	icon: "img/tt.png",
 	popup: {
 		href: "popup.html",
 		width: 300,
