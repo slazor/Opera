@@ -1,4 +1,3 @@
-jQuery = jQuery;
 function APIClass(apiDomain) {
 	
 	this.apiDomain = apiDomain;
