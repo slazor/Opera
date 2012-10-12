@@ -1,8 +1,20 @@
-jQuery(document).ready(function($) {
+jQuery(function($) {
+	var bg = opera.extension.bgProcess;
+	var tt = bg.tt;
+	
 	if(widget.preferences.name != undefined) {
-		alert(widget.preferences.name);
+		//alert(widget.preferences.name);
 	}
-	$('#save').click(function() {
-		widget.preferences.name = "Hello";
+	
+	$('#login').click(function() {
+		var status = tt.userLogin('the_username');
+		
+		alert(status);
+		
+		if(status) {
+			return true;
+		} else {
+			return false;
+		}
 	});
 });

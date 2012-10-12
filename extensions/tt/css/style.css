@@ -2,6 +2,8 @@ body,a,textarea,div,h3, li, ul { margin: 0; padding: 0; }
 li { list-style: none; }
 
 body {
+	border: 1px solid #989898;
+	border-radius: 2px;
 	background-color: #ddd;
 	overflow: hidden;
 }
