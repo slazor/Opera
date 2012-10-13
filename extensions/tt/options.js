@@ -2,19 +2,8 @@ jQuery(function($) {
 	var bg = opera.extension.bgProcess;
 	var tt = bg.tt;
 	
-	if(widget.preferences.name != undefined) {
-		//alert(widget.preferences.name);
+	if(widget.preferences.request_token == undefined) {
+		window.location.href = 'login.html';
 	}
-	
-	$('#login').click(function() {
-		var status = tt.userLogin('the_username');
-		
-		alert(status);
-		
-		if(status) {
-			return true;
-		} else {
-			return false;
-		}
-	});
+
 });

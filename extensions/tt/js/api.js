@@ -3,26 +3,40 @@ function APIClass(apiDomain) {
 	this.apiDomain = apiDomain;
 	
 	this.apiCall = function(type, api, data) {
-
+		
 		var response;
-		var xhr = new XMLHttpRequest();
-		xhr.open('POST', this.apiDomain, false);
+		var xhr			= new XMLHttpRequest();
+		var params	= data;
+		var url			= this.apiDomain+api;
+		
+		if(type == 'GET') {
+			url = url+'?'+params;
+		}
+		
+		xhr.open(type, url, false);
+		
+		if(type == 'POST') {
+			xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+			xhr.setRequestHeader("Content-length", params.length);
+			xhr.setRequestHeader("Connection", "close");
+		}
 
 		xhr.onreadystatechange = function() {
 			if(this.readyState == 4) {
-				// Error check for fetching the URL
+			
 				if(this.status == 200 && this.responseText) {
 					response = this.responseText;
 				} else {
-					opera.postError('EXTENSION ERROR: Can\'t read ' + url);
+					opera.postError('API ERROR: ' + url);
 					return false;
 				}
+				
 			}
 		};
 
-		xhr.send();
+		xhr.send(params);
 		
-		return response;
+		return JSON.parse(response);
 
 	}
 	
