@@ -1,19 +1,3 @@
-var buttonProperties = {
-	title: "TT",
-	icon: "img/tt.png",
-	popup: {
-		href: "popup.html",
-		width: 300,
-		height: 100
-	}
-}
-var button	= opera.contexts.toolbar.createItem(buttonProperties);
-//var api		= new APIClass('http://railgun.no-ip.info/scraperfront/');
-var api		= new APIClass('http://localhost/api.php/');
-var tt			= new TT();
-
-opera.contexts.toolbar.addItem(button);
-
 function TT() {
 
 	this.resizePopup = function(height) {
@@ -35,6 +19,15 @@ function TT() {
 	
 	this.userGetInfo = function(token) {
 		return api.apiCall('GET', 'User/', token);
+	}
+	
+	this.getListData = function() {
+		var lists = JSON.parse(widget.preferences.lists);
+		var returnLists = new Array();
+		for(var i in lists.lists) {
+			returnLists[returnLists.length] = JSON.parse(localStorage.getItem('list_'+lists.lists[i]));
+		}
+		return returnLists;
 	}
 	
 	this.makeString = function(arr) {
