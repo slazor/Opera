@@ -13,4 +13,3 @@ var api		= new APIClass('http://localhost/api.php/');
 var tt			= new TT();
 
 opera.contexts.toolbar.addItem(button);
-
