@@ -24,9 +24,18 @@ function TT() {
 	this.getListData = function() {
 		var lists = JSON.parse(widget.preferences.lists);
 		var returnLists = new Array();
+		
 		for(var i in lists.lists) {
-			returnLists[returnLists.length] = JSON.parse(localStorage.getItem('list_'+lists.lists[i]));
+			var list = localStorage.getItem('list_'+lists.lists[i]);
+			if(list != undefined) {
+				returnLists[returnLists.length] = JSON.parse(localStorage.getItem('list_'+lists.lists[i]));
+			}
 		}
+		
+		if(returnLists == '') {
+			returnLists = false;
+		}
+		
 		return returnLists;
 	}
 	

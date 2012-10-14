@@ -36,7 +36,11 @@ function APIClass(apiDomain) {
 
 		xhr.send(params);
 		
-		return JSON.parse(response);
+		if(response != undefined) {
+			return JSON.parse(response);
+		} else {
+			return false;
+		}
 
 	}
 	
