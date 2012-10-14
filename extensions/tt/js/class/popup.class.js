@@ -37,17 +37,17 @@ function Popup() {
 	this.toggleList = function($this) {
 		var step = 0;
 		$this.find('.item-details').stop().animate({height: 'toggle'}, {
-				duration: 200, 
-				step: function(now,fx) {
-					if(step > 0) {
-						tt.resizePopup(document.body.offsetHeight);
-					}
-					step++;
-				}, 
-				complete: function() {
-					step = 0;
+			duration: 100, 
+			step: function(now,fx) {
+				if(step > 0) {
+					tt.resizePopup(document.body.offsetHeight);
 				}
-			});
+				step++;
+			}, 
+			complete: function() {
+				step = 0;
+			}
+		});
 	}
 
 }
