@@ -5,7 +5,9 @@ var op	= new Options();
 window.addEventListener('DOMContentLoaded', function() {
 	op.isLoggedIn();
 	
-	var lists = tt.getListData();
-	op.addLists(lists);
-
+	var listId = op.getVar()['list'];
+	var list = tt.getSingleList(listId);
+	
+	$('#list-title').text(list.list_name);
+	
 }, false);

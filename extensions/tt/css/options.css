@@ -45,6 +45,8 @@ p {
 	margin: 5px 0px 10px;
 }
 
+
+
 /* FORMS */
 .textfield {
 	border: 1px solid #9c9c9c;
@@ -61,6 +63,8 @@ input.submit {
 input.submit:hover {
 	background-color: #c9d2d8;
 }
+
+
 
 /* LISTS */
 #container table {
@@ -97,4 +101,32 @@ input.submit:hover {
 
 .edit-list {
 	text-align: right;
+}
+
+
+
+/* EDIT PAGE */
+
+#tag-list {
+	margin-top: 10px;
+	overflow: hidden;
+}
+
+#tag-list li {
+	background-color: #dcdcdc;
+	border: 1px solid #9c9c9c;
+	border-radius: 3px;
+	float: left;
+	padding: 5px;
+	margin-right: 10px;
+}
+
+#tag-list li span {
+	background-color:#f00;
+	cursor: pointer;
+	display: block;
+	float: right;
+	height: 15px;
+	width: 15px;
+	text-indent: -9999px;
 }

@@ -21,6 +21,13 @@ function TT() {
 		return api.apiCall('GET', 'User/', token);
 	}
 	
+	this.getSingleList = function(listId) {
+		var list = localStorage.getItem('list_'+listId);
+		if(list != undefined) {
+			return JSON.parse(list);
+		}
+	}
+	
 	this.getListData = function() {
 		var lists = JSON.parse(widget.preferences.lists);
 		var returnLists = new Array();
