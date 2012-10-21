@@ -7,12 +7,12 @@ function Popup() {
 		
 		var install_one = localStorage.getItem('list_1');
 		if(install_one == undefined) {
-			localStorage.setItem('list_1', '{"list_id":1,"list_name":"Gintama","list_data":[{"title":"[HorribleSubs] Gintama - 254 [720p].mkv","link":"Oct 11 2012, 10:05 UTC"},{"title":"[HorribleSubs] Gintama - 253 [720p].mkv","link":"Oct 04 2012, 10:05 UTC"},{"title":"[HorribleSubs] Gintama - 252 [720p].mkv","link":"Sept 28 2012, 10:05 UTC"}]}');
+			localStorage.setItem('list_1', '{"list_id":1,"list_name":"Gintama","list_tags":["HorribleSubs","Gintama","720p"],"list_category":"cat_id","list_data":[{"title":"[HorribleSubs] Gintama - 254 [720p].mkv","link":"http:\/\/www.nyaa.eu\/?page=torrentinfo&tid=361088","time":"Oct 11 2012, 10:05 UTC"},{"title":"[HorribleSubs] Gintama - 253 [720p].mkv","link":"http:\/\/www.nyaa.eu\/?page=torrentinfo&tid=361088","time":"Oct 04 2012, 10:05 UTC"},{"title":"[HorribleSubs] Gintama - 252 [720p].mkv","link":"http:\/\/www.nyaa.eu\/?page=torrentinfo&tid=361088","time":"Sept 28 2012, 10:05 UTC"}]}');
 		}
 		
 		var install_two = localStorage.getItem('list_2');
 		if(install_two == undefined) {
-			localStorage.setItem('list_2', '{"list_id":2,"list_name":"Little Busters!","list_data":[{"title":"[Hatsuyuki]_Little_Busters!_-_03_[10bit][1280x720][071B9D84].mkv","link":"Oct 9 2012, 23:30 UTC"},{"title":"[Hatsuyuki]_Little_Busters!_-_02_[10bit][1280x720][071B9D84].mkv","link":"Oct 2 2012, 23:30 UTC"},{"title":"[Hatsuyuki]_Little_Busters!_-_01_[10bit][1280x720][071B9D84].mkv","link":"Sept 26 2012, 10:05 UTC"}]}');
+			localStorage.setItem('list_2', '{"list_id":2,"list_name":"Little Busters!","list_tags":["Hatsuyuki","Little_Busters","1280x720"],"list_category":"cat_id","list_data":[{"title":"[Hatsuyuki]_Little_Busters!_-_03_[10bit][1280x720][071B9D84].mkv","link":"http:\/\/www.nyaa.eu\/?page=torrentinfo&tid=360618","time":"Oct 9 2012, 23:30 UTC"},{"title":"[Hatsuyuki]_Little_Busters!_-_02_[10bit][1280x720][071B9D84].mkv","link":"http:\/\/www.nyaa.eu\/?page=torrentinfo&tid=360618","time":"Oct 2 2012, 23:30 UTC"},{"title":"[Hatsuyuki]_Little_Busters!_-_01_[10bit][1280x720][071B9D84].mkv","link":"http:\/\/www.nyaa.eu\/?page=torrentinfo&tid=360618","time":"Sept 26 2012, 10:05 UTC"}]}');
 		}
 	}
 

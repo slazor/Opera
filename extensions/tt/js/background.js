@@ -18,6 +18,7 @@ opera.contexts.toolbar.addItem(button);
 window.addEventListener("load", function() {	
 	// Init auto-update
 	opera.postError('TT: Auto-update started!');
+	widget.preferences.updateIntervall = 15;
 	update();
 }, false);
 

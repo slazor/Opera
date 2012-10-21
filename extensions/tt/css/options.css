@@ -121,7 +121,7 @@ input.submit:hover {
 	margin-right: 10px;
 }
 
-#tag-list li span {
+#tag-list li span.remove-tag {
 	background-color:#f00;
 	cursor: pointer;
 	display: block;

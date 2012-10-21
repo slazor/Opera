@@ -1,47 +1,44 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>TT Edit</title>
+		<title></title>
 		<link rel='stylesheet' type='text/css' href='css/options.css'/>
 	</head>
 	<body>
 		<div id="topbar"></div>
-		<h1>Edit</h1>
+		<h1></h1>
 		<div id="settings-box">
 			
 			<div class="box">
 				<h2 id="list-title"></h2>
 				<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut placerat sapien.</p>
 			</div>
-			<form>
+			<form action="" method="post" id="list-form">
 				<div class="box">
 					<h2 id="category-title">Category</h2>
 					<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut placerat sapien.</p>
 					<select name="category">
-						<option>Anime</option>
-						<option>Hentai</option>
+						<option value="1">Anime</option>
+						<option value="2">Hentai</option>
 					</select>
 				</div>
 				
 				<div class="box">
 					<h2 id="tags-title">Tags</h2>
 					<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut placerat sapien.</p>
-					<input type="text" name="tag-field" class="textfield" />
-					<input type="button" name="add-tag" class="add-button" value="Add tag">
-					<ul id="tag-list">
-						<li>HorribleSubs <span class="remove-tag">Remove</span></li>
-						<li>Gintama <span class="remove-tag">Remove</span></li>
-						<li>720p <span class="remove-tag">Remove</span></li>
-					</ul>
+					<input type="text" name="tag-field" class="textfield" id="tag-field" />
+					<input type="button" name="add-tag" id="add-tag-button" value="Add tag">
+					<ul id="tag-list"></ul>
 				</div>
 				
-				<input type="hidden" name="" value="TAGS|GO|HERE" />
-				<input type="submit" value="Save" />
+				<input type="hidden" name="tags" id="tags" value="" />
+				<input type="hidden" name="list-id" id="list-id" value="" />
+				<input type="submit" value="Save" id="submit" />
 			</form>
 		</div>
 		
 		<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
 		<script type="text/javascript" src="js/class/options.class.js"></script>
-		<script type="text/javascript" src="js/editlist.js"></script>
+		<script type="text/javascript" src="js/addeditlist.js"></script>
 	</body>
 </html>
