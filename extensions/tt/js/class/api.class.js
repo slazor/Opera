@@ -6,24 +6,24 @@ function APIClass(apiDomain) {
 		
 		var response;
 		var xhr			= new XMLHttpRequest();
-		var params	= data;
+		var params		= data;
 		var url			= this.apiDomain+api;
 		
 		if(type == 'GET') {
 			url = url+'?'+params;
 		}
-		
+
 		xhr.open(type, url, false);
 		
 		if(type == 'POST') {
-			xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+			//xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 			xhr.setRequestHeader("Content-length", params.length);
 			xhr.setRequestHeader("Connection", "close");
 		}
-
+		
 		xhr.onreadystatechange = function() {
 			if(this.readyState == 4) {
-			
+				opera.postError(this.responseText);
 				if(this.status == 200 && this.responseText) {
 					response = this.responseText;
 				} else {
@@ -33,9 +33,9 @@ function APIClass(apiDomain) {
 				
 			}
 		};
-
-		xhr.send(params);
 		
+		xhr.send(params);
+
 		if(response != undefined) {
 			return JSON.parse(response);
 		} else {

@@ -8,23 +8,24 @@
 		<div id="topbar"></div>
 		<h1></h1>
 		<div id="settings-box">
-			
-			<div class="box">
-				<h2 id="list-title"></h2>
-				<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut placerat sapien.</p>
-			</div>
 			<form action="" method="post" id="list-form">
 				<div class="box">
-					<h2 id="category-title">Category</h2>
+					<h2 id="listname-title"><label for="listname-field">List name</label></h2>
 					<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut placerat sapien.</p>
-					<select name="category">
+					<input type="text" name="listname-field" class="textfield" id="listname-field" />
+				</div>
+				
+				<div class="box">
+					<h2 id="category-title"><label for="category-field">Category</label></h2>
+					<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut placerat sapien.</p>
+					<select name="category" id="category-field">
 						<option value="1">Anime</option>
 						<option value="2">Hentai</option>
 					</select>
 				</div>
 				
 				<div class="box">
-					<h2 id="tags-title">Tags</h2>
+					<h2 id="tags-title"><label for="tag-field">Tags</label></h2>
 					<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut placerat sapien.</p>
 					<input type="text" name="tag-field" class="textfield" id="tag-field" />
 					<input type="button" name="add-tag" id="add-tag-button" value="Add tag">

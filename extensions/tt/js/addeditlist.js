@@ -7,16 +7,16 @@ window.addEventListener('DOMContentLoaded', function() {
 	
 	if(op.isAddList()) {
 	
-		op.setPageTitle('TT Add list', 'Add a list');
+		op.setPageTitle('Add list', 'Add a list');
 		
 	} else {
 	
-		op.setPageTitle('TT Edit list', 'Edit a list');
+		op.setPageTitle('Edit list', 'Edit a list');
 		
 		var listId = op.getVar()['list'];
 		var list = tt.getSingleList(listId);
 	
-		$('#list-title').text(list.list_name);
+		$('#listname-field').val(list.list_name);
 		
 		$('#list-id').val(list.list_id);
 		

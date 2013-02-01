@@ -37,9 +37,10 @@ function TT() {
 	// Add token to api send data
 	this.addToken = function(data) {
 		if(data == false) {
-			return 'request_token='+widget.preferences.request_token;
+			return {'request_token':widget.preferences.request_token};
 		} else {
-			return data+'&request_token='+widget.preferences.request_token;
+			data.request_token = widget.preferences.request_token;
+			return data;
 		}
 	}
 	
@@ -54,9 +55,8 @@ function TT() {
 	
 	// Updates localstorage
 	this.updateLocalStorage = function(lists) {
-		
 		// Update available lists
-		var listIds = { };
+		var listIds = {};
 		listIds.lists = lists.list_ids
 		listIds = JSON.stringify(listIds);
 		widget.preferences.lists = listIds;
@@ -85,22 +85,23 @@ function TT() {
 	}
 	
 	// Get users information from API
-	this.userGetInfo = function() {
-		var token = this.addToken(false);
-		return api.apiCall('GET', 'User/', token);
+	this.userGetInfo = function(token) {
+		var data = JSON.stringify({'request_token':token});
+		
+		return api.apiCall('POST', 'User/', data);
 	}
 	
 	// Get all users lists from API
 	this.getLists = function() {
-		var token = this.addToken(false);
-		var call = api.apiCall('GET', 'Lists/', token);
+		var data = JSON.stringify(this.addToken(false));
+		var call = api.apiCall('POST', 'Lists/', data);
 		this.updateLocalStorage(call);
 		return call;
 	}
 	
 	// Adds a list through the API
 	this.addList = function(data) {
-		data = this.addToken(data);
+		data = JSON.stringify(this.addToken(data));
 		var call = api.apiCall('POST', 'Lists/Add/', data);
 		var lists = this.getLists();
 		return lists;
@@ -108,7 +109,7 @@ function TT() {
 	
 	// Updates an existing list through the API
 	this.updateList = function(listId, data) {
-		data = this.addToken(data);
+		data = JSON.stringify(this.addToken(data));
 		var call = api.apiCall('POST', 'Lists/Update/'+listId+'/', data);
 		return call.status;
 	}

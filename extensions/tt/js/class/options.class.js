@@ -71,9 +71,9 @@ function Options() {
 	
 	this.saveForm = function() {
 		if(this.addTagsToForm()) {
-			var form = $('#list-form').serialize();
+			var form = $('#list-form').serializeFormJSON();
 			var listId = $('#list-id').val().trim();
-			
+
 			if(listId != '') {
 				var status = tt.updateList(listId, form);
 				alert(status);
