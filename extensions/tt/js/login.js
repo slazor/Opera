@@ -17,6 +17,9 @@ jQuery(function($) {
 				widget.preferences.request_token	= token;
 				widget.preferences.username			= userInfo.username;
 				widget.preferences.email			= userInfo.email;
+				
+				var lists = tt.getLists();
+				
 				window.location.href				= 'options.html';
 			}
 			

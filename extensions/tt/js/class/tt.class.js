@@ -78,7 +78,6 @@ function TT() {
 		if(call.token) {
 			return call.token;
 		} else {
-			console.log(call);
 			return call;
 		}
 		
@@ -87,7 +86,6 @@ function TT() {
 	// Get users information from API
 	this.userGetInfo = function(token) {
 		var data = JSON.stringify({'request_token':token});
-		
 		return api.apiCall('POST', 'User/', data);
 	}
 	

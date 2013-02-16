@@ -7,4 +7,5 @@
 	<preference name="updateIntervall" value="15" />
 	<access origin="http://no-ip.info" subdomains="true"/>
 	<access origin="http://localhost" subdomains="true"/>
+	<access origin="http://www.project-railgun.dev" subdomains="true"/>
 </widget>

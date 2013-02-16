@@ -40,7 +40,7 @@ function Options() {
 		} else {
 			var none = new Object();
 			none.list_name = 'You have no lists!';
-			data = data + formatList(none, false);
+			data = data + this.formatList(none, false);
 		}
 		data = data + '</table>';
 		

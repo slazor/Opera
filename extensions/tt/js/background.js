@@ -9,9 +9,10 @@ var buttonProperties = {
 }
 
 var button	= opera.contexts.toolbar.createItem(buttonProperties);
-//var api		= new APIClass('http://railgun.no-ip.info/scraperfront/');
-var api		= new APIClass('http://localhost/api.php/v1/');
-var tt			= new TT();
+//var api	= new APIClass('http://railgun.no-ip.info/scraperfront/');
+//var api		= new APIClass('http://localhost/api.php/v1/');
+var api		= new APIClass('http://www.project-railgun.dev/api/v1/');
+var tt		= new TT();
 
 opera.contexts.toolbar.addItem(button);
 

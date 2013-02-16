@@ -4,8 +4,9 @@ var op	= new Options();
 
 window.addEventListener('DOMContentLoaded', function() {
 	op.isLoggedIn();
-	
-	var lists = tt.getListData();
-	op.addLists(lists);
+	var lists = tt.getLists();
+	opera.postError(lists);
+	//var lists = tt.getListData();
+	//op.addLists(lists);
 
 }, false);
