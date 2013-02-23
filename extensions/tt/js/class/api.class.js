@@ -23,7 +23,6 @@ function APIClass(apiDomain) {
 		
 		xhr.onreadystatechange = function() {
 			if(this.readyState == 4) {
-				opera.postError(this.responseText);
 				if(this.status == 200 && this.responseText) {
 					response = this.responseText;
 				} else {

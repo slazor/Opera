@@ -30,10 +30,11 @@ function Options() {
 	
 	// Adds lists to options page
 	this.addLists = function(lists) {
-		var data = '<table>';
+		//var data = '<table>';
+		var data = '';
 
 		if(lists != false) {
-			data = data + '<thead><th class="head-name">List name</th><th>Last update</th><th></th></thead>';
+			//data = data + '<thead><th class="head-name">List name</th></thead>';
 			for(var i in lists) {
 				data = data + this.formatList(lists[i], true);
 			}
@@ -42,9 +43,9 @@ function Options() {
 			none.list_name = 'You have no lists!';
 			data = data + this.formatList(none, false);
 		}
-		data = data + '</table>';
+		//data = data + '</table>';
 		
-		$('#container').append(data);
+		$('#container').find('tbody').append(data);
 		
 		return true;
 	}
@@ -53,53 +54,12 @@ function Options() {
 	this.formatList = function(list, show) {
 		var data = '';
 		data = data + '<tr class="item">';
-		data = data + '<td class="list-item list-name">'+list.list_name+'</td>';
-		if(show) {
-			data = data + '<td class="list-item last-update">2012-10-14</td>';
-			data = data + '<td class="list-item edit-list"><a href="addeditlist.html?list='+list.list_id+'">Edit</a></td>';
-		}
+		data = data + '<td class="list-item list-name">'+list.title+'</td>';
+		//if(show) {
+		//	data = data + '<td class="list-item last-update">2012-10-14</td>';
+		//}
 		data = data + '</tr>';
 		return data;
-	}
-	
-	this.addTag = function(tag) {
-		tag = tag.trim();
-		if(tag != undefined && tag != '') {
-			$('#tag-list').append('<li><span class="data">'+tag+' </span> <span class="remove-tag">Remove</span></li>');
-		}
-	}
-	
-	this.saveForm = function() {
-		if(this.addTagsToForm()) {
-			var form = $('#list-form').serializeFormJSON();
-			var listId = $('#list-id').val().trim();
-
-			if(listId != '') {
-				var status = tt.updateList(listId, form);
-				alert(status);
-			} else {
-				var status = tt.addList(form);
-				alert("GOT ALL LISTS");
-			}
-			
-		} else {
-			alert("NO TAGS");
-		}
-	}
-	
-	this.addTagsToForm = function() {
-		var amount = 0;
-		$tagField = $('#tags');
-		
-		$('#tag-list li').each(function(i, data) {
-			$tagField.val($tagField.val()+$(this).find('.data').html().trim()+'|');
-			amount++;
-		});
-		
-		if(amount > 0) {
-			return true;
-		}
-		return false;
 	}
 
 }

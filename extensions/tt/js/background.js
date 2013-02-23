@@ -18,15 +18,15 @@ opera.contexts.toolbar.addItem(button);
 
 window.addEventListener("load", function() {	
 	// Init auto-update
-	opera.postError('TT: Auto-update started!');
+	console.info('TT: Auto-update started!');
 	widget.preferences.updateIntervall = 15;
 	update();
 }, false);
 
 // Auto-Update function
 function update() {
-	opera.postError('TT: Lists updated!');
-	
+	console.info('TT: Lists updated!');
+	tt.getLists();
 	// Re-run update function every "updateInvervall" minutes
 	window.setTimeout(update, widget.preferences.updateIntervall * 60000);
 }

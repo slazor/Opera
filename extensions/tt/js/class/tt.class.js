@@ -57,18 +57,16 @@ function TT() {
 	this.updateLocalStorage = function(lists) {
 		// Update available lists
 		var listIds = {};
-		listIds.lists = lists.list_ids
+		listIds.lists = lists.ids
 		listIds = JSON.stringify(listIds);
 		widget.preferences.lists = listIds;
 		
 		// Update list data
 		for(var i in lists.lists) {
-			var listId = lists.lists[i].list_id;
+			var listId = lists.lists[i].id;
 			localStorage.setItem('list_'+listId, JSON.stringify(lists.lists[i]));
 		}
-		
 	}
-	
 	
 	/* API functions */
 	
@@ -80,7 +78,6 @@ function TT() {
 		} else {
 			return call;
 		}
-		
 	}
 	
 	// Get users information from API
@@ -96,21 +93,5 @@ function TT() {
 		this.updateLocalStorage(call);
 		return call;
 	}
-	
-	// Adds a list through the API
-	this.addList = function(data) {
-		data = JSON.stringify(this.addToken(data));
-		var call = api.apiCall('POST', 'Lists/Add/', data);
-		var lists = this.getLists();
-		return lists;
-	}
-	
-	// Updates an existing list through the API
-	this.updateList = function(listId, data) {
-		data = JSON.stringify(this.addToken(data));
-		var call = api.apiCall('POST', 'Lists/Update/'+listId+'/', data);
-		return call.status;
-	}
-	
 
 }
