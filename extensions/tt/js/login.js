@@ -10,7 +10,6 @@ jQuery(function($) {
 
 		if(typeof(token) == 'string') {
 			
-			alert('Token: '+token);
 			var userInfo = tt.userGetInfo(token);
 			
 			if(userInfo.username != '' && userInfo.email != '') {
@@ -24,7 +23,7 @@ jQuery(function($) {
 			}
 			
 		} else {
-			alert("Error: "+token.error);
+			opera.postError("Error: "+token.error);
 		}
 		
 		return false;
