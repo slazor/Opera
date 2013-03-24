@@ -2,7 +2,7 @@ body,a,textarea,div,h3, li, ul, p, h2 { margin: 0; padding: 0; }
 li { list-style: none; }
 
 body {
-	background: url('../img/background.png');
+	background: url('../image/background.png');
 	font-family: "Arial";
 }
 

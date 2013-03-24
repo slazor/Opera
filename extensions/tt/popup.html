@@ -1,13 +1,47 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>TT popup</title>
-		<link rel='stylesheet' type='text/css' href='css/style.css'/>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<link href="css/bootstrap.min.css" media="screen" rel="stylesheet" type="text/css" />
+		<link href="css/style.css" media="screen" rel="stylesheet" type="text/css" />
 	</head>
+
 	<body>
-		<ul id="container"></ul>
+		<div id="content">
+			<div id="login">
+				<div class="header">
+					<h1>You need to login!</h1>
+				</div>
+				<div class="list">
+					<h2><a class="settings" href="options.html" target="_blank" title="Settings">Go to the login page.</a></h2>
+				</div>
+			</div>
+			
+			<div id="loggedin">
+				<div class="header">
+					<h1>My lists</h1>
+					<a class="settings" href="options.html" target="_blank" title="Settings"><i class="icon icon-th-large"></i></a>
+				</div>
+
+				<div class="lists">
+						<!--
+						<div class="list">
+							<div class="title"><h2><i class="icon icon-list"></i> This is a list title</h2></div>
+							
+							<ul class="items">
+								<li><a href="#"><i class="icon icon-music"></i> An album name goes here</a></li>
+								<li><a href="#"><i class="icon icon-picture"></i> Picture album or doujin</a></li>
+								<li><a href="#"><i class="icon icon-facetime-video"></i> Video file name here</a></li>
+								<li><a href="#"><i class="icon icon-file"></i> Unknown torrent content</a></li>
+							</ul>
+						</div>
+						-->
+				</div>
+			</div>
+		</div>
 		
-		<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+		<script type="text/javascript" src="js/jquery-1.9.0.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="js/class/popup.class.js"></script>
 		<script type="text/javascript" src="js/script.js"></script>
 	</body>

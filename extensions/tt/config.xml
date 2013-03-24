@@ -3,7 +3,7 @@
 	<name>TT</name>
 	<description>TT Description</description>
   	<author href="http://www.mikaelwase.com" email="mikaelwase@gmail.com">Mikael Wase</author>
-  	<icon src="img/tt-dialog.png"/>
+  	<icon src="image/tt-dialog.png"/>
 	<preference name="updateIntervall" value="15" />
 	<access origin="http://no-ip.info" subdomains="true"/>
 	<access origin="http://localhost" subdomains="true"/>
